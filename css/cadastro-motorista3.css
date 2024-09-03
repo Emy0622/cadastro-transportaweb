@@ -1,0 +1,148 @@
+/* .imagem-formulario{
+    width: 100vh;
+    height: 100px;
+    background-color: #000000;
+    position: relative;
+    margin-bottom: 80vh;
+    left: 60vh;
+} */
+selection{
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    margin-right: 100vh;
+    margin-top: 20vh;
+}
+
+.inputbox{
+    position: relative;
+    margin: 80px 0; /* margem entre eles */
+    width: 750px; /* distancia os itens */
+    color: #D92727;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-200%);
+    font-size: 20px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.inputbox input{
+    width: 90vh; /* aumenta o tamanho dos inputs */
+    height: 40px;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 2px solid rgb(192, 0, 0); 
+    border-top: 2px solid #E8E8E8; 
+    border-left: 2px solid #E8E8E8; 
+    border-right: 2px solid #E8E8E8; 
+    background: #E8E8E8;
+
+}
+
+button{
+background-color: #D92727;
+width: 265px;
+height: 50px;
+border-radius: 40px;
+border: none;
+outline: none;
+position:relative;
+top: 80%;
+font-size: 30px;
+color: rgb(255, 255, 255);
+text-align: center; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+font-size: "Nunito";
+font-weight: 600;
+
+}
+
+button img{
+    margin-left: 30px;
+}
+
+
+
+p{
+    color: black;
+    font-family: "Nunito";
+    font-size: 18px;
+    margin: 10px;
+}
+
+.palavra{
+    color: #D92727;
+    font-weight: 800;
+  }
+
+
+/* hr{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+  } */
+  
+  
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito";
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    height: 100vh; 
+}
+
+.desc-container {
+    position: fixed;
+    right: 20vh; /* Espaçamento da borda direita da tela */
+    top: 60px; /* Espaçamento do topo da tela */
+    bottom: 60px;
+    padding-bottom: 60vh; /* Espaçamento interno */
+    width: 60vh; /* Largura do container */
+    background-color: #D92727; /* Cor de fundo */
+}
+
+.desc-container h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    padding: center;
+}
+
+.desc-container p {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    /* padding-right: 20px; */
+    margin: 5px;
+
+}
+
+.desc-container img {
+    position: relative;
+    bottom: 60px;
+    height: 70vh;
+    right: 10vh;
+}
+
+
