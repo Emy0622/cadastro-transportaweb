@@ -1,11 +1,167 @@
-/* .imagem-formulario{
-    width: 100vh;
-    height: 100px;
-    background-color: #000000;
-    position: relative;
-    margin-bottom: 80vh;
-    left: 60vh;
-} */
+body { 
+
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Nunito', sans-serif; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    height: 100vh; 
+
+} 
+
+
+/*Passos - passo */ 
+
+.passos { 
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 30px; 
+    position: absolute; /* Ajusta a posição se necessário */ 
+    top: 80px; /* Ajusta a posição se necessário */ 
+    left: -400px; 
+    width: 100%; 
+    text-align: center; 
+
+} 
+
+
+.passo { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 100px; 
+    position: relative; 
+
+} 
+
+.passo:not(:last-child)::after { 
+    content: ""; 
+    position: absolute; 
+    width: 170px; /* Ajuste o comprimento da linha conforme necessário */ 
+    height: 2px; /* Ajuste a espessura da linha conforme necessário */ 
+    background-color: #8D8D8D; /* Cor da linha */ 
+    top: 2vh; 
+    left: 25px; /* Ajuste a posição horizontal da linha conforme necessário */ 
+    transform: translateY(-50%); 
+
+} 
+
+.passo2 { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 100px; 
+    position: relative; 
+
+} 
+
+.passo2:not(:last-child)::after { 
+    content: ""; 
+    position: absolute; 
+    width: 200px; /* Ajuste o comprimento da linha conforme necessário */ 
+    height: 2px; /* Ajuste a espessura da linha conforme necessário */ 
+    background-color: #8D8D8D; /* Cor da linha */ 
+    top: 2vh; 
+    left: 10px; /* Ajuste a posição horizontal da linha conforme necessário */ 
+    transform: translateY(-50%); 
+
+} 
+
+.passo-circulo { 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    border: 2px solid #D92727; /* Adiciona a borda vermelha */ 
+    color: #D92727; /* Cor do texto */ 
+    background-color: red; /* Fundo transparente */ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 14px; 
+    font-weight: bold; 
+    position: absolute;
+
+} 
+.passo-circulo2 { 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    border: 2px solid #8D8D8D; /* Adiciona a borda vermelha */ 
+    color: #8D8D8D; /* Cor do texto */ 
+    background-color: #8D8D8D; /* Fundo transparente */ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 14px; 
+    font-weight: bold; 
+    position: absolute;
+
+} 
+
+.passo-borda { 
+    top: -9px;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: 2px solid #ff0000; /* Adiciona a borda vermelha */ 
+    background-color:rgba(9, 255, 0, 0);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 14px; 
+    font-weight: bold; 
+    position: absolute;
+} 
+.passo-borda2 { 
+    top: -9px;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: 2px solid #c6c6c6; /* Adiciona a borda vermelha */ 
+    background-color:rgba(9, 255, 0, 0);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 14px; 
+    font-weight: bold; 
+    position: absolute;
+} 
+
+/*formulário */ 
+
+.forms-section { 
+    display: flex; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    min-height: 100vh; 
+    width: 100%; 
+    margin-right: 100vh; 
+    margin-top: 20vh; 
+
+} 
+ 
+
+.forms { 
+
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+
+} 
+
+ 
+
 selection{
     display: flex;
     background-repeat: no-repeat;
