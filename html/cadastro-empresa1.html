@@ -1,75 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Empresa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/cadastro-empresa1.css"> 
-
-</head> 
-
-<body> 
-
-    <div class="container"> 
-        <section class="passos"> 
-            <div class="passo"> 
-                <div class="passo-circulo"></div> 
-                <div class="passo-borda"></div> 
-            </div>   
-            <div class="passo2"> 
-                <div class="passo-circulo2"></div>
-                <div class="passo-borda2"></div>  
-            </div> 
-
-            <div class="passo2"> 
-                <div class="passo-circulo2"></div> 
-                <div class="passo-borda2"></div> 
-            </div> 
-
-</div> 
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <title>Cadastro</title>
+     <link rel="stylesheet" href="../css/cadastro-empresa1.css">
+     <link rel="stylesheet" href="../css/root.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <div class="container">
-        <selection>
-                <div class="forms">
-                    <form action="">
-                        <div class="inputbox">
-                            <input type="nome" required>
-                            <label for="nome">Nome Completo:</label>
-                        </div>
-                        <div class="inputbox">
-                            <input type="email" required>
-                            <label for="email">Email:</label>
-                        </div>
-                        <div class="inputbox">
-                            <input type="password" required>
-                            <label for="Senha">Senha:</label>
-                        </div>
-                        <div class="inputbox">
-                            <input type="password" required>
-                            <label for="Conf-senha">Confirme sua senha:</label>
-                        </div>
-                        <div>
-                            <button id="Continuar"> Continuar
-                                <img src="../css/img/seta-direita 2.png" alt="Descrição da Imagem">
-                            </button>
-                            <p>Já possui uma conta? <span class="palavra">Login<span> 
-                                
-                                </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </selection>
-        <div class="desc-container" >
-      <h1>Crie uma conta!</h1>
-      <p>Com a Transporta Web, você pode gerenciar toda a operação de transporte, 
-        melhorar a comunicação entre a empresa e o motorista, 
-        e acompanhar o progresso em tempo integral.</p>
-              <img src="../css/img/cadastro.png"> 
-                </div>
+       <div class="progress-bar">
+          <div class="step">
+             <div class="bullet">
+                <span>.</span>
+             </div>
+             <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+             <div class="bullet">
+                <span>.</span>
+             </div>
+             <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+             <div class="bullet">
+                <span>.</span>
+             </div>
+             <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+             <div class="bullet">
+                <span>.</span>
+             </div>
+             <div class="check fas fa-check"></div>
+          </div>
+       </div>
+       <div class="form-outer">
+          <form action="#">
+             <div class="page slide-page">
 
+              <div class="select">
+                  <div class="select-option">
+                      <div class="select-image">
+                          <img src="../css/img/companhia 2.png" alt="empresa">
+                      </div>
+                      <div class="select-text">Empresa</div>
+                  </div>
+                  <div class="select-option">
+                      <div class="select-image funcionario">
+                          <img src="../css/img/funcionario.png" alt="funcionario">
+                      </div>
+                      <div class="select-text">Funcionário</div>
+                  </div>
+              </div>
+
+                <div class="field">
+                   <div class="label">
+                      Nome completo:
+                   </div>
+                   <input type="text" placeholder="Digite seu nome completo">
+                </div>
+                <div class="field">
+                   <div class="label">
+                      Data de nascimento:
+                   </div>
+                   <input type="date" placeholder="Escolha sua data de nascimento">
+                </div>
+                <div class="field">
+                   <div class="label">
+                      CPF:
+                   </div>
+                   <input type="text" placeholder="Digite seu CPF">
+                </div>
+                <div class="field">
+                   <div class="label">
+                      RG:
+                   </div>
+                   <input type="text" placeholder="Digite seu RG">
+                </div>
+                <div class="field">
+                   <button class="firstNext next">Continuar</button>
+                </div>
+             </div>
+             <div class="page">
+                <div class="field">
+                   <div class="label">
+                      Número de Telefone:
+                   </div>
+                   <input type="text" placeholder="Digite seu telefone">
+                </div>
+                <div class="field">
+                   <div class="label">
+                      Email:
+                   </div>
+                   <input type="tel" placeholder="Digite seu email">
+                </div>
+                <div class="field">
+                  <div class="label">
+                     Senha:
+                  </div>
+                  <input type="text" placeholder="Crie uma senha">
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Confirme sua senha:
+                  </div>
+                  <input type="text" placeholder="Digite a senha novamente">
+               </div>
+                <div class="field btns">
+                   <button class="prev-1 prev">Voltar</button>
+                   <button class="next-1 next">Continuar</button>
+                </div>
+             </div>
+             <div class="page">
+              
+                <div class="field btns">
+                   <button class="prev-2 prev">Voltar</button>
+                   <button class="next-2 next">Continuar</button>
+                </div>
+             </div>
+             <div class="page">
+                <div class="title">
+                   Login Details:
+                </div>
+                <div class="field">
+                   <div class="label">
+                      Username
+                   </div>
+                   <input type="text" placeholder="Escolha um nome de usuário">
+                </div>
+                <div class="field">
+                   <div class="label">
+                      Password
+                   </div>
+                   <input type="password" placeholder="Escolha uma senha">
+                </div>
+                <div class="field btns">
+                   <button class="prev-3 prev">Voltar</button>
+                   <button class="submit">Concluir</button>
+                </div>
+             </div>
+          </form>
+       </div>
+    </div>
+    <div class="desc-container" >
+        <h1>Crie uma conta!</h1>
+        <p>Com a Transporta Web, você pode gerenciar toda a operação de transporte, 
+          melhorar a comunicação entre a empresa e o motorista, 
+          e acompanhar o progresso em tempo integral.</p>
+                <img src="../css/img/cadastro.png"> 
+                  </div>
+                  <script src="script.js"></script>
+  
 </body>
-
 </html>
