@@ -95,7 +95,7 @@
     font-size: 17px;
    }
    form .page .btns button.next{
-    margin-left: 3px;
+    margin-left: 20px;
    }
    .container .progress-bar{
     display: flex;
@@ -104,7 +104,8 @@
    }
    .container .progress-bar .step{
     text-align: center;
-    width: 100%;
+    left: 90px;
+    width: 170px;
     position: relative;
    }
    .progress-bar .step .bullet{

@@ -1,4 +1,3 @@
-
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
@@ -7,70 +6,89 @@ const prevBtnThird = document.querySelector(".prev-2");
 const nextBtnThird = document.querySelector(".next-2");
 const prevBtnFourth = document.querySelector(".prev-3");
 const submitBtn = document.querySelector(".submit");
-const progressText = document.querySelectorAll(".step p");
 const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
 
+// Função para atualizar a navegação
+function updateNavigation() {
+    slidePage.style.marginLeft = `${-25 * (current - 1)}%`;
+}
 
-nextBtnFirst.addEventListener("click", function(event){
- event.preventDefault();
- slidePage.style.marginLeft = "-25%";
- bullet[current - 1].classList.add("active");
- progressCheck[current - 1].classList.add("active");
- progressText[current - 1].classList.add("active");
- current += 1;
-});
-nextBtnSec.addEventListener("click", function(event){
- event.preventDefault();
- slidePage.style.marginLeft = "-50%";
- bullet[current - 1].classList.add("active");
- progressCheck[current - 1].classList.add("active");
- progressText[current - 1].classList.add("active");
- current += 1;
-});
-nextBtnThird.addEventListener("click", function(event){
- event.preventDefault();
- slidePage.style.marginLeft = "-75%";
- bullet[current - 1].classList.add("active");
- progressCheck[current - 1].classList.add("active");
- progressText[current - 1].classList.add("active");
- current += 1;
-});
-submitBtn.addEventListener("click", function(){
- bullet[current - 1].classList.add("active");
- progressCheck[current - 1].classList.add("active");
- progressText[current - 1].classList.add("active");
- current += 1;
- setTimeout(function(){
-   alert("Seu cadastro foi concluído!");
-   location.reload();
- },800);
+// Função para atualizar o progresso (aplicar `active` apenas no botão "Continuar")
+function updateProgress() {
+    bullet.forEach((b, index) => {
+        b.classList.toggle("active", index < current);
+    });
+    progressCheck.forEach((c, index) => {
+        c.classList.toggle("active", index < current);
+    });
+}
+
+// Navegação para o próximo passo (marcar o check do passo atual)
+function handleNextButton() {
+    if (current < 4) {
+        // Marca o check e bullet para o passo atual
+        bullet[current - 1].classList.add("active");
+        progressCheck[current - 1].classList.add("active");
+        current += 1;
+        updateNavigation();
+    }
+}
+
+// Adiciona um evento de clique para o botão de próximo do primeiro passo
+nextBtnFirst.addEventListener("click", function(event) {
+    event.preventDefault();
+    handleNextButton(); // Atualiza a navegação e o progresso
 });
 
+// Adiciona um evento de clique para o botão de próximo do segundo passo
+nextBtnSec.addEventListener("click", function(event) {
+    event.preventDefault();
+    handleNextButton(); // Atualiza a navegação e o progresso
+});
 
-prevBtnSec.addEventListener("click", function(event){
- event.preventDefault();
- slidePage.style.marginLeft = "0%";
- bullet[current - 2].classList.remove("active");
- progressCheck[current - 2].classList.remove("active");
- progressText[current - 2].classList.remove("active");
- current -= 1;
+
+// Concluir o passo atual e marcar o check
+submitBtn.addEventListener("click", function() {
+    if (current < 3) {
+        // Marcar o check e bullet para o passo atual
+        bullet[current - 1].classList.add("active");
+        progressCheck[current - 1].classList.add("active");
+        current += 1;
+        updateNavigation();
+    } else {
+        setTimeout(function() {
+            alert("Seu cadastro foi concluído!");
+            location.reload();
+        }, 800);
+    }
 });
-prevBtnThird.addEventListener("click", function(event){
- event.preventDefault();
- slidePage.style.marginLeft = "-25%";
- bullet[current - 2].classList.remove("active");
- progressCheck[current - 2].classList.remove("active");
- progressText[current - 2].classList.remove("active");
- current -= 1;
+
+// Navegação para o passo anterior
+prevBtnSec.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (current > 1) {
+        current -= 1;
+        updateNavigation();
+    }
 });
-prevBtnFourth.addEventListener("click", function(event){
- event.preventDefault();
- slidePage.style.marginLeft = "-50%";
- bullet[current - 2].classList.remove("active");
- progressCheck[current - 2].classList.remove("active");
- progressText[current - 2].classList.remove("active");
- current -= 1;
+
+prevBtnThird.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (current > 1) {
+        current -= 1;
+        updateNavigation();
+    }
 });
+
+prevBtnFourth.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (current > 1) {
+        current -= 1;
+        updateNavigation();
+    }
+});
+
+
 
